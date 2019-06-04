@@ -32,6 +32,8 @@ app.set('view engine', 'ejs');
 // set path for static assets
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'basicSou')));
+app.use(express.static(path.join(__dirname, 'Dashio')));
+
 
 app.use(express.urlencoded({ extended: true }));
 
