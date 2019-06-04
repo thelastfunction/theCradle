@@ -200,6 +200,7 @@ iframe {
   flex-wrap: wrap;
   align-items: stretch;
   flex-direction: row-reverse;
+  height: 700px;
 
 }
 
@@ -256,14 +257,24 @@ iframe {
 }
 
 
-
+.cbutton {
+  display: block;
+  width: 115px;
+  height: 25px;
+  background: #4E9CAF;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
 /*------------------------------------------------------------------
 [ Input ]*/
 
 .wrap-input100 {
   width: 100%;
   position: relative;
-  border: 1px solid #e6e6e6;
+  /* border: 1px solid #e6e6e6; */
 }
 
 .rs1-wrap-input100,

@@ -17,8 +17,6 @@ router.get('/contact', function(req, res, next) {
 });
 
 
-// router.get('/login', forwardAuthenticated, (req, res) => res.render('login'));
-
 // // Dashboard
 router.get('/dashboard', ensureAuthenticated, (req, res) =>
   res.render('dashboard', {
