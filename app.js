@@ -25,12 +25,13 @@ mongoose
   .catch(err => console.log(err));
 
 // EJS
-app.use(expressLayouts);
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // set path for static assets
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'extras')));
 
 app.use(express.urlencoded({ extended: true }));
 
@@ -60,6 +61,8 @@ app.use(function(req, res, next) {
 
 // routes
 app.use('/', index);
+// app.use(expressLayouts);
+
 app.use('/users', users);
 
 // catch 404 and forward to error handler
