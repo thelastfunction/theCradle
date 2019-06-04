@@ -2,7 +2,7 @@ var express = require('express');
 // var router = express.Router();
 
 const router = express.Router();
-// const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
+const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', {page:'Home', menuId:'home'});
@@ -20,11 +20,11 @@ router.get('/contact', function(req, res, next) {
 // router.get('/login', forwardAuthenticated, (req, res) => res.render('login'));
 
 // // Dashboard
-// router.get('/dashboard', ensureAuthenticated, (req, res) =>
-//   res.render('dashboard', {
-//     user: req.user
-//   })
-// );
+router.get('/dashboard', ensureAuthenticated, (req, res) =>
+  res.render('dashboard', {
+    user: req.user
+  })
+);
 
 
 module.exports = router;
