@@ -6,8 +6,14 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const expressLayouts = require('express-ejs-layouts');
 var logger = require('morgan');
+
+
+
 var index = require('./routes/index');
 var users = require('./routes/users')
+var products = require('./routes/products')
+var research = require('./routes/research')
+var blog = require('./routes/blog')
 
 
 var app = express();
@@ -65,6 +71,20 @@ app.use(function(req, res, next) {
 app.use('/', index);
 // app.use(expressLayouts);
 app.use('/users', users);
+app.use('/products', products);
+app.use('/blog', blog);
+app.use('/research', research);
+
+
+
+
+
+
+
+
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
