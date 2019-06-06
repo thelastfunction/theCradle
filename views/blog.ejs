@@ -1,33 +1,20 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-    <% include partials/index_scripts %> 
+    <% include basic_partials/index_scripts %> 
 </head>
 
 <body id="top">
 
     <!-- preloader
     ================================================== -->
-    <div id="preloader">
-        <div id="loader" class="dots-fade">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
-
-
-    <!-- header
-    ================================================== -->
+    <% include basic_partials/preloader %> 
     
-<% include partials/index_header %> 
-<section class="s-content">
-        
+    <% include basic_partials/index_header %> 
+    <section class="s-content">    
         <div class="row entries-wrap wide">
             <div class="entries">
             <% include blog_partials/articles %> 
-                
-
             </div> <!-- end entries -->
         </div> <!-- end entries-wrap -->
 
@@ -50,5 +37,5 @@
         </div>
 
     </section> <!-- end s-content -->
-    <% include partials/scripts_bottom %> 
+    <% include basic_partials/scripts_bottom %> 
 </body>

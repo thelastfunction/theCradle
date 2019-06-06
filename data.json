@@ -10,7 +10,7 @@
   },
   {
     "title" : "About us",
-    "tsubmenu":["Why I created this","What defines us","What we think"],
+    "tsubmenu":[],
     "episode_number" : "1",
     "main_characters" : ["Qui-Gon Jinn", "Obi-Wan Kenobi", "Anakin Skywalker", "Padmé Amidala", "Jar Jar Binks", "Darth Maul"],
     "description" : "Nute Gunray is planning to take over ",
@@ -59,7 +59,7 @@
 
   {
     "title" : "Contact us",
-    "tsubmenu":["Where we are","Follow us"],
+    "tsubmenu":[],
     "episode_number" : "5",
     "main_characters" : ["Luke Skywalker", "Han Solo", "Princess Leia Organa", "Darth Vader", "C-3P0", "R2-D2", "Chewbacca", "Lando Calrissian", "Boba Fett"],
     "description" : "Fleeing the evil Galactic Empire",

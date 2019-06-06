@@ -2,34 +2,33 @@ var express = require('express');
 // var router = express.Router();
 var dataJSON = require('../data.json');
 const router = express.Router();
-const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
+
 /* GET home page. */
 
 
 
 
-
-
-router.get('/' || '/home', function(req, res, next) {
-	var fileData=dataJSON.movies;
-  res.render('index', {page:'Home', menuId:'home',frm_data:fileData});
+router.get('/home', function(req, res, next) {
+	
+  res.render('index', {page:'Home', menuId:'home',frm_data:dataJSON.movies});
 });
 
+
+router.get('/', function(req, res, next) {
+	
+  res.render('index', {page:'Home', menuId:'home',frm_data:dataJSON.movies});
+});
+
+
 router.get('/aboutus', function(req, res, next) {
-  res.render('about', {page:'About Us', menuId:'about',frm_data:fileData});
+  res.render('aboutus', {page:'About Us', menuId:'about',frm_data:dataJSON.movies});
 });
 
 router.get('/contactus', function(req, res, next) {
-  res.render('contact', {page:'Contact Us', menuId:'contact',frm_data:fileData});
+  res.render('contactus', {page:'Contact Us', menuId:'contact',frm_data:dataJSON.movies});
 });
 
 
-// // Dashboard
-router.get('/dashboard', ensureAuthenticated, (req, res) =>
-  res.render('dashboard', {
-    user: req.user
-  })
-);
 
 
 module.exports = router;
