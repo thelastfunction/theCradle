@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include partials/index_scripts %> 
+    <% include research_partials/head %> 
+
+
+</head>
+
+<body>
+	<% include partials/index_header %> 
+	<!-- SECTION -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div id="hot-post" class="row hot-post">
+				<% for (var i = 0; i < 20; i++) { %>
+
+					<% max =4%>
+					<% min =2%>
+					<!-- <div id = "one" class="col-md-<%= Math.floor(Math.random() * (max - min + 1)) + min %> hot-post-left"> -->
+						<div id = "one" class="col-md-3 hot-post-left">
+						<!-- post -->
+						<div class="post post-thumb">
+							<a class="post-img" href="/callie/blog-post.html"><img src="/callie/img/hot-post-3.jpg" alt=""></a>
+							<div class="post-body">
+								<div class="post-category">
+									<a href="category.html">Lifestyle</a>
+								</div>
+								<h3 class="post-title title-lg"><a href="/callie/blog-post.html">""</a></h3>
+								<ul class="post-meta">
+									<li><a href="author.html">John Doe</a></li>
+									<li>20 April 2018</li>
+								</ul>
+							</div>
+						</div>
+						<!-- /post -->
+					</div>
+           		<% }%> 
+
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /SECTION -->
+
+
+	<!-- jQuery Plugins -->
+
+    <% include research_partials/scripts_bottom%> 
+
+</body>
+
+</html>

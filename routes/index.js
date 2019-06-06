@@ -10,16 +10,16 @@ const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
 
 
 
-router.get('/', function(req, res, next) {
+router.get('/' || '/home', function(req, res, next) {
 	var fileData=dataJSON.movies;
   res.render('index', {page:'Home', menuId:'home',frm_data:fileData});
 });
 
-router.get('/about', function(req, res, next) {
+router.get('/aboutus', function(req, res, next) {
   res.render('about', {page:'About Us', menuId:'about',frm_data:fileData});
 });
 
-router.get('/contact', function(req, res, next) {
+router.get('/contactus', function(req, res, next) {
   res.render('contact', {page:'Contact Us', menuId:'contact',frm_data:fileData});
 });
 
