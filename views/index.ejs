@@ -1,27 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
 <head>
- <% include partials/head %> 
+    <% include partials/index_scripts %> 
 </head>
-<body>
-<% include partials/menu %>
 
-<div class="container-fluid bg-3 text-center">    
-  <h3><%= page %></h3><br>
-  <div class="row">
-    <div class="col-sm-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      
+<body id="top">
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
-    <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-  </div>
-</div>
+
+
+    <!-- header
+    ================================================== -->
+    
+<% include partials/index_header %> 
+
+    <!-- featured 
+    ================================================== -->
+    <section class="s-featured">
+        <div class="row">
+            <div class="col-full">
+
+                <div class="featured-slider featured" data-aos="zoom-in">
+
+                    <div class="featured__slide">
+                        <div class="entry">
+
+                            <div class="entry__background" style="background-image:url('/wordsmith/images/thumbs/featured/featured-guitarman.jpg');"></div>
+                            
+                            <div class="entry__content">
+                                <span class="entry__category"><a href="/wordsmith/#0">Music</a></span>
+
+                                <h1><a href="/wordsmith/#0" title="">What Your Music Preference Says About You and Your Personality.</a></h1>
+
+                                <div class="entry__info">
+                                    <a href="/wordsmith/#0" class="entry__profile-pic">
+                                        <img class="avatar" src="/wordsmith/images/avatars/user-05.jpg" alt="">
+                                    </a>
+                                    <ul class="entry__meta">
+                                        <li><a href="/wordsmith/#0">Jonathan Smith</a></li>
+                                        <li>June 02, 2018</li>
+                                    </ul>
+                                </div>
+                            </div> <!-- end entry__content -->
+                            
+                        </div> <!-- end entry -->
+                    </div> <!-- end featured__slide -->
+
+                    <div class="featured__slide">
+
+                        <div class="entry">
+
+                            <div class="entry__background" style="background-image:url('/wordsmith/images/thumbs/featured/featured-watch.jpg');"></div>
+                            
+                            <div class="entry__content">
+                                <span class="entry__category"><a href="/wordsmith/#0">Management</a></span>
+
+                                <h1><a href="/wordsmith/#0" title="">The Pomodoro Technique Really Works.</a></h1>
+
+                                <div class="entry__info">
+                                    <a href="/wordsmith/#0" class="entry__profile-pic">
+                                        <img class="avatar" src="/wordsmith/images/avatars/user-03.jpg" alt="">
+                                    </a>
+
+                                    <ul class="entry__meta">
+                                        <li><a href="/wordsmith/#0">John Doe</a></li>
+                                        <li>June 13, 2018</li>
+                                    </ul>
+                                </div>
+                            </div> <!-- end entry__content -->
+                            
+                        </div> <!-- end entry -->
+
+                    </div> <!-- end featured__slide -->
+
+                    <div class="featured__slide">
+
+                        <div class="entry">
+
+                            <div class="entry__background" style="background-image:url('/wordsmith/images/thumbs/featured/featured-beetle.jpg');"></div>
+
+                            <div class="entry__content">
+                                <span class="entry__category"><a href="/wordsmith/#0">LifeStyle</a></span>
+
+                                <h1><a href="/wordsmith/#0" title="">The difference between Classics, Vintage & Antique Cars.</a></h1>
+
+                                <div class="entry__info">
+                                    <a href="/wordsmith/#0" class="entry__profile-pic">
+                                        <img class="avatar" src="/wordsmith/images/avatars/user-03.jpg" alt="">
+                                    </a>
+
+                                    <ul class="entry__meta">
+                                        <li><a href="/wordsmith/#0">John Doe</a></li>
+                                        <li>June 12, 2018</li>
+                                    </ul>
+                                </div>
+                            </div> <!-- end entry__content -->
+
+                        </div> <!-- end entry -->
+
+                    </div> <!-- end featured__slide -->
+                    
+                </div> <!-- end featured -->
+
+            </div> <!-- end col-full -->
+        </div>
+    </section> <!-- end s-featured -->
+
+
+
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="/wordsmith/js/jquery-3.2.1.min.js"></script>
+    <script src="/wordsmith/js/plugins.js"></script>
+    <script src="/wordsmith/js/main.js"></script>
 
 </body>
-<% include partials/script %>
+
 </html>

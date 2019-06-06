@@ -1,19 +1,26 @@
 var express = require('express');
 // var router = express.Router();
-
+var dataJSON = require('../data.json');
 const router = express.Router();
 const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
 /* GET home page. */
+
+
+
+
+
+
 router.get('/', function(req, res, next) {
-  res.render('index', {page:'Home', menuId:'home'});
+	var fileData=dataJSON.movies;
+  res.render('index', {page:'Home', menuId:'home',frm_data:fileData});
 });
 
 router.get('/about', function(req, res, next) {
-  res.render('about', {page:'About Us', menuId:'about'});
+  res.render('about', {page:'About Us', menuId:'about',frm_data:fileData});
 });
 
 router.get('/contact', function(req, res, next) {
-  res.render('contact', {page:'Contact Us', menuId:'contact'});
+  res.render('contact', {page:'Contact Us', menuId:'contact',frm_data:fileData});
 });
 
 
